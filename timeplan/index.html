@@ -1,0 +1,71 @@
+---
+menu: timeplan
+layout: default
+title: Tidsplan
+menu: Tidsplan
+permalink: /tidsplan/
+---
+
+<div>
+  <h1 class="post-title pull-left">Tidsplan</h1>
+  <div class="Squares pull-right">
+    <span class="lecture"></span>Föreläsning
+    <span class="project"></span>Projekt
+  </div>
+</div>
+
+<table class="TimePlan">
+  <colgroup>
+    <col width="8%"></col>
+    <col width="18%"></col>
+    <col width="18%"></col>
+    <col width="18%"></col>
+    <col width="18%"></col>
+    <col width="18%"></col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+    {% for day in site.data.timeplan.week_days %}
+      <th>{{ day.title }}</th>
+    {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+  {% for week in site.data.timeplan.week_numbers %}
+    {% assign week_posts = site.posts | where: 'week', week %}
+    <tr></tr>
+    <tr class="fm">
+      <th>v.{{ week }}</th>
+      <th>08:30 - 11:30</th>
+    {% for weekday in site.data.timeplan.week_days %}
+      {% assign color = site.data.timeplan.grid[week][weekday.name]['fm'] %}
+      <td class="{{ color }}">
+      {% assign posts = week_posts | where: 'weekday', weekday.name %}
+      {% assign posts = posts | where: 'daytime', 'fm' %}
+      {% for post in posts %}
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      {% endfor %}
+      {% if posts == empty and color == 'project' %}Projekt{% endif %}
+      </td>
+    {% endfor %}
+    </tr>
+    <tr class="em">
+      <th></th>
+      <th>12:30 - 15:30</th>
+    {% for weekday in site.data.timeplan.week_days %}
+      {% assign color = site.data.timeplan.grid[week][weekday.name]['em'] %}
+      <td class="{{ color }}">
+      {% assign posts = week_posts | where: 'weekday', weekday.name %}
+      {% assign posts = posts | where: 'daytime', 'em' %}
+      {% for post in posts %}
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      {% endfor %}
+      {% if posts == empty and color == 'project' %}Projekt{% endif %}
+      </td>
+    {% endfor %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>

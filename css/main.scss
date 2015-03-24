@@ -21,9 +21,28 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
+$green-color: #8CC63E;
+$green-color-light: lighten($green-color, 20%);
+$green-color-dark:   darken($green-color, 15%);
+
+$lecture-color: rgb(197, 255, 197);
+$lecture-color-light: lighten($lecture-color, 20%);
+$lecture-color-dark:   darken($lecture-color, 15%);
+
+$project-color: lightblue;
+$project-color-light: lighten($project-color, 20%);
+$project-color-dark:   darken($project-color, 15%);
+
+$project-start-color: rgb(229, 180, 245);
+$project-start-color-light: lighten($project-start-color, 20%);
+$project-start-color-dark:   darken($project-start-color, 15%);
+
+$project-presentation-color: rgb(232, 218, 159);
+$project-presentation-color-light: lighten($project-presentation-color, 20%);
+$project-presentation-color-dark:   darken($project-presentation-color, 15%);
+
 $on-palm:          600px;
 $on-laptop:        800px;
-
 
 
 // Using media queries with like this:
@@ -47,3 +66,127 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+.pull-left  { float: left; }
+.pull-right { float: right; }
+
+.TimePlan {
+  width: 100%;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 5px;
+  tr {
+    height: 10px;
+  }
+  th, td {
+    line-height: 30px;
+    padding: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+  }
+  td {
+    height: 30px;
+    border-color: $grey-color;
+    color: #444;
+  }
+  td a {
+    display: block;
+    height: 100%;
+    text-decoration: underline;
+    &:link, &:visited, &:active { color: #000; }
+  }
+}
+
+.Squares {
+  span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 30px;
+    vertical-align: text-bottom;
+    border: 1px solid $grey-color;
+  }
+}
+
+.lecture              {
+  background-color: $lecture-color;
+  a:hover { background-color: $lecture-color-dark; }
+}
+.project              {
+  background-color: $project-color;
+  a:hover { background-color: $project-color-dark; }
+}
+.project_start        {
+  background-color: $project-start-color;
+  a:hover { background-color: $project-start-color-dark; }
+}
+.project_presentation {
+
+  background-color: $project-presentation-color;
+  a:hover { background-color: $project-presentation-color-dark; }
+}
+
+.post-content aside {
+  float: left;
+}
+
+blockquote {
+  margin: 20px 0 25px;
+  border-left-width: 6px;
+}
+
+.LinksForm {
+  margin: 0 0 15px;
+
+  label {
+    margin-left: 10px;
+    white-space: nowrap;
+  }
+}
+
+.Links {
+  li {
+    margin-top: 10px;
+  }
+
+  li a {
+    position: relative;
+    top: 3px;
+    font-size: 14pt;
+    font-family: monospace;
+  }
+}
+.Tags {
+  display: inline-block;
+
+  span {
+    display: inline-block;
+    line-height: 16px;
+    margin: 0 3px;
+    padding: 0 5px;
+    background: $green-color-dark;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 10pt;
+    color: white;
+  }
+}
+
+.AlbertPhoto {
+  float: left;
+  position: relative;
+  top: -20px;
+  width: 106px;
+  height: 106px;
+  margin: 8px 16px 8px 0;
+  border-radius: 8px;
+  box-shadow: 0px 7px 15px rgba(0,0,0,.3);
+}
+.Term {
+  line-height: 56px;
+  padding: 0 20px;
+  font-size: 18px;
+  color: #888;
+}

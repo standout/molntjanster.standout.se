@@ -1,0 +1,148 @@
+grid:
+  15:
+    friday:
+      fm: lecture
+      em: lecture
+  16:
+    thursday:
+      em: lecture
+    friday:
+      fm: lecture
+      em: project_start
+  17:
+    wednesday:
+      fm: project
+      em: project
+    friday:
+      fm: project
+      em: project
+  18:
+    wednesday:
+      fm: project
+      em: project
+  19:
+    wednesday:
+      fm: project
+      em: project
+    friday:
+      fm: project_presentation
+      em: project_start
+  20:
+    wednesday:
+      fm: project
+      em: project
+    friday:
+      fm: project
+      em: project
+  21:
+    wednesday:
+      fm: project
+      em: project
+    friday:
+      fm: project
+      em: project
+  22:
+    wednesday:
+      fm: project
+      em: project
+    friday:
+      fm: project
+      em: project_presentation
+week_days:
+  -
+    name: wednesday
+    title: "Onsdag"
+    short: "On"
+  -
+    name: thursday
+    title: "Torsdag"
+    short: "To"
+  -
+    name: friday
+    title: "Fredag"
+    short: "Fr"
+week_numbers:
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+weeks:
+  -
+    title: "Vecka 15"
+    short: "v.15"
+    days:
+      -
+      -
+      -
+      -
+      -
+        -
+          title: "Föreläsning 1"
+          url: /2015/04/10/introduktion.html
+  -
+    title: "Vecka 16"
+    short: "v.16"
+    days:
+      -
+      -
+      -
+      - "Föreläsning 2"
+      - "Föreläsning 3"
+  -
+    title: "Vecka 17"
+    short: "v.17"
+    days:
+      -
+      -
+      -
+      -
+      -
+  -
+    title: "Vecka 18"
+    short: "v.18"
+    days:
+      -
+      -
+      -
+      -
+      -
+  -
+    title: "Vecka 19"
+    short: "v.19"
+    days:
+      -
+      -
+      -
+      -
+      -
+  -
+    title: "Vecka 20"
+    short: "v.20"
+    days:
+      -
+      -
+      -
+      -
+      -
+  -
+    title: "Vecka 21"
+    short: "v.21"
+    days:
+      -
+      -
+      -
+      -
+      -
+  -
+    title: "Vecka 22"
+    short: "v.22"
+    days:
+      -
+      -
+      -
+      -
+      -

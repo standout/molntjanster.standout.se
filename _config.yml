@@ -1,14 +1,18 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Molntjänster - Växjö Yrkeshögskola
+school_term: VT 2015
+author: Albert Arvidsson
+email: albert.arvidsson@standout.se
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Den här kursen behandlar kunskaper om de affärsmässiga och tekniska
+  perspektiven på molntjänster. Den studerande ska få kunskaper om hur man
+  inför, driftar och styr olika molntjänster såsom Google App Engine, Amazon Web
+  Services och Microsoft Azure Services Platform.
+google_analytics_code: "UA-61720125-1"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://molntjanster.standout.se" # the base hostname & protocol for your site
+twitter_username: albertarv
+github_username:  scmx
 
 # Build settings
 markdown: kramdown

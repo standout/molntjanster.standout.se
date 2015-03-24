@@ -1,0 +1,136 @@
+---
+layout: page
+title: Länkar
+menu: Länkar
+permalink: /links/
+---
+
+<!-- When angular isnt loaded this works as a normal form -->
+<!-- When angular is loaded it performs instant filtering -->
+<form method="get" action="/links/" class="LinksForm">
+  <input type="search" name="ord" placeholder="Sök..."
+    ng-model="searchFilter['$']"
+    ng-change="search()"/>
+  <button type="submit">Sök</button>
+  <label>
+    <input type="checkbox" ng-model="showDescriptions"/> Visa beskrivningar
+  </label>
+  <label>
+    <input type="checkbox" ng-model="showTags"/> Visa taggar
+  </label>
+</form>
+
+<h3 ng-cloak ng-show="links.length && !filteredLinks.length">
+  <span>Hoppsan!</span>
+  <small>
+    Din sökning på `[[ searchFilter['$'] ]]` matchade tyvärr ingenting.<br/>
+    Men tipsa mig gärna, så kanske vi pratar om det på nästa lektion.
+  </small>
+</h3>
+
+<!-- Angular list that can be searched, replaces jekyll list once ready -->
+<ul ng-cloak ng-show="links.length" class="Links">
+  <li ng-repeat="link in filteredLinks = (links | filter: searchFilter)">
+    <a ng-href="[[ link.url ]]">[[ link.title ]]</a>
+    <span class="Tags" ng-show="showTags">
+      - <span ng-repeat="category in link.categories">[[ category.human ]]</span>
+    </span>
+    <div ng-show="showDescriptions">[[ link.description ]]</div>
+  </li>
+</ul>
+
+<!-- Default list that search engines see, we hide this when the angular list is ready -->
+<ul ng-hide="links.length" class="Links">
+{% for link in site.data.links %}
+  <li>
+    <a href="{{ link.url }}">{{ link.title }}</a>
+    <span class="Tags">- {% for category in link.categories %}<span
+      >{{ site.data.categories[category] }}</span
+      >{% endfor %}</span>
+    <div>{{ link.description }}</div>
+  </li>
+{% endfor %}
+</div>
+
+<style type="text/css">
+  [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+  }
+</style>
+
+<script src="/vendor/angular.min.js"></script>
+<script>
+  angular.module('app', [])
+  // Work directly against url /arkiv.html?ord=xyz instead of /arkiv.html#/?ord=xyz
+  .config(function ($locationProvider) {
+    $locationProvider.html5Mode(true);
+  })
+  // Use square brackets instead of curly braces so we don't collide with jekyll
+  .config(function($interpolateProvider){
+    $interpolateProvider.startSymbol('[[').endSymbol(']]');
+  })
+  .filter('values', function () {
+    return function (object) {
+      var array = [];
+      for (var prop in object) {
+        if (object.hasOwnProperty(prop)) {
+          array.push(object[prop]);
+        }
+      }
+      return array;
+    };
+  })
+  .filter('join', function () {
+    return function(array, delimiter) {
+      return (array || []).join(delimiter);
+    }
+  })
+  .controller('RootCtrl', function ($scope, $http, $rootScope, $location, $timeout) {
+    $scope.showTags = true;
+    $scope.showDescriptions = true;
+    // GET /avsnitt.json collection and save to $scope.posts
+    $http.get('/links.json')
+      .then(function (response) {
+        $scope.links = response.data;
+      });
+    // Define our filtering object
+    // By defining the $ property, angular gives us free text search automatically
+    $scope.searchFilter = {
+      '$': $location.search().word
+    };
+    // This is called repeatedly when user is typing
+    $scope.search = function () {
+      // Update search params as user is typing
+      var cached = $location.search().word;
+      $timeout(function () {
+        if ($location.search().word !== cached) { return; }
+        $location.search({
+          word: $scope.searchFilter['$']
+        });
+      }, 300);
+    };
+    // Since we have html5mode enabled, angular will prevent normal
+    // navigation to other pages when clicking links, we have to manually
+    // make sure to change window.location when appropriate.
+    $rootScope.$on('$locationChangeStart', function (_event, newUrl, oldUrl) {
+      function removeProtocol(url) {
+        return url.substr(url.indexOf(':') + 3, url.length - 1);
+      }
+      function removeHost(url) {
+        return url.substr(url.indexOf('/') + 1, url.length - 1);
+      }
+      var path = removeHost(removeProtocol(newUrl));
+      var oldPath = removeHost(removeProtocol(oldUrl));
+      // Break out of angular app if url is another page
+      // In all other cases we want to stay here,
+      // because the event was triggered by $location.search()
+      if (path.substr(0, 6) !== 'links/') { window.location = newUrl; }
+      // When user clicks on Arkiv again we should reset searchFilter,
+      // easist way is to do a full page reload
+      if (path === 'links/') {
+        // But we dont want an infinite loop
+        if (oldPath !== 'links/') { window.location = '/links/'; }
+      }
+    });
+  });
+</script>

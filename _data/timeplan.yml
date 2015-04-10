@@ -23,7 +23,7 @@ grid:
   19:
     wednesday:
       fm: project
-      em: project
+      em:
     friday:
       fm: project_presentation
       em: project_start

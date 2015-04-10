@@ -5,6 +5,5 @@ date: "2015-04-10 08:30"
 week: 15
 daytime: fm
 weekday: friday
+slide: molntjanster-1
 ---
-
-Mer info här inom kort.

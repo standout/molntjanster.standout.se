@@ -3,42 +3,67 @@
   description: "Cloud computing involves deploying groups of remote servers and software networks that allow centralized data storage and online access to computer services or resources"
   url: http://en.wikipedia.org/wiki/Cloud_computing
   categories: [concept]
+  votes: [dan, rob]
 - title: "SaaS"
   description: "Software as a Service (SaaS) is a software distribution model in which applications are hosted by a vendor or service provider and made available to customers over a network, typically the Internet."
   url: http://en.wikipedia.org/wiki/Software_as_a_service
   categories: [concept]
+  votes: [sko, dan, olo, kri, eng]
 - title: "PaaS"
   description: "Platform as a service (PaaS) is a cloud model in which providers deliver apps over the Internet and host users' hardware and software on their infrastructure."
   url: http://en.wikipedia.org/wiki/Platform_as_a_service
   categories: [concept]
+  votes: [olo, kri, lov]
 - title: "IaaS"
   description: "Infrastructure as a service (IaaS) is a type of cloud computing in which a third-party provider hosts virtualized computing resources over the Internet."
   url: http://en.wikipedia.org/wiki/Cloud_computing#Infrastructure_as_a_service_.28IaaS.29
   categories: [concept]
+  votes: [sko, dan, dah, kri]
 - title: "DBaaS"
   description: "Database as a service (DBaaS) that typically runs on a cloud computing platform, such as Amazon EC2, GoGrid, Salesforce, Rackspace, and Microsoft Azure"
   url: http://en.wikipedia.org/wiki/Cloud_database
   categories: [concept]
+  votes: [sko, kri]
 - title: "BaaS"
   description: "Backend as a Service (BaaS), sometimes referred to as mBaaS, is a kind of turn-on cloud computing backend suited for mobile, tablet and web apps"
   url: http://en.wikipedia.org/wiki/Mobile_Backend_as_a_service
   categories: [concept]
+  votes: [kri, lov]
+- title: "Desktop as a Service"
+  description: "Software technology that separates the desktop environment and associated application software from the physical client device that is used to access it"
+  url: http://en.wikipedia.org/wiki/Desktop_virtualization
+  categories: [concept]
+  votes: [sko]
+- title: "Personal Cloud"
+  description: "Collection of digital content and services which are accessible from any device. A place which gives users the ability to store, synchronize, stream and share content on a relative core, moving from one platform, screen and location to another"
+  url: http://en.wikipedia.org/wiki/Personal_cloud
+  categories: [concept]
+  votes: [zso]
 - title: "Cloud Computing Orchestration"
   description: "Architecture, tools and processes used by humans to deliver a cloud service intended to scale-up arbitrarily and dynamically, without requiring direct human intervention to do so."
   url: http://en.wikipedia.org/wiki/Orchestration_%28computing%29
   categories: [concept]
+  votes: [lov]
 - title: "Version control"
   description: "Also known as revision control and source control (and an aspect of software configuration management), is the management of changes to documents, computer programs, large web sites, and other collections of information"
   url: http://en.wikipedia.org/wiki/Revision_control
   categories: [concept]
+  votes: []
 - title: "Continuous delivery (CD)"
   description: "Software engineering approach in which teams keep producing valuable software in short cycles and ensure that the software can be reliably released at any time"
   url: http://en.wikipedia.org/wiki/Continuous_delivery
   categories: [concept]
+  votes: []
 - title: "Continuous integration (CI)"
   description: "Software development practice where members of a team integrate their work multiple times per day, by verifying with an automated build (including test) to detect errors asap"
   url: http://en.wikipedia.org/wiki/Continuous_integration
   categories: [concept]
+  votes: []
+- title: "Open Source"
+  description: "A computer program in which the source code is available to the general public for use and/or modification from its original design. Open-source code is meant to be a collaborative effort, where programmers improve upon the source code and share the changes within the community"
+  url: http://en.wikipedia.org/wiki/Open_source
+  categories: [concept]
+  votes: [ber]
 
 
 # Version Control
@@ -46,191 +71,241 @@
   description: "Distributed version control system designed to handle everything from small to very large projects with speed and efficiency"
   url: https://www.virtualbox.org/
   categories: [versioncontrol, opensource]
+  votes: [sko]
 - title: "GitHub"
   description: "Best place to share code with friends, co-workers, classmates, and complete strangers. Over eight million people use GitHub to build amazing things together"
   url: https://github.com/
   categories: [sourcecode, community, hosting, versioncontrol]
+  votes: [sko, ram, lov]
 - title: "Bitbucket"
   description: "Free code hosting site for Git and Mercurial. Manage your development with a hosted wiki, issue tracker and source code"
   url: https://www.virtualbox.org/
   categories: [sourcecode, community, hosting, versioncontrol]
+  votes: []
 
 # virtualization
 - title: "VirtualBox"
   description: "Powerful virtualization product for windows, linux, osx"
   url: https://www.virtualbox.org/
   categories: [virtualization, opensource]
+  votes: [eng]
 - title: "VMware"
   description: "Virtualization and cloud computing software provider"
   url: http://www.vmware.com/se
   categories: [virtualization]
+  votes: [sko, dan, ram, jel, rob, eng]
 - title: "Vagrant"
   description: "Software for creating and configuring virtual development environments, a wrapper around virtualization software such as VirtualBox, VMware"
   url: https://www.vagrantup.com/
   categories: [virtualization, development, environment, opensource]
+  votes: [ahm, rob]
 
 # Containers
 - title: "Linux Containers (LXC)"
   description: "Userspace interface for the Linux kernel, which lets Linux users easily create and manage system or application containers"
   url: https://linuxcontainers.org/
   categories: [container, opensource]
+  votes: [dan, ahm]
 - title: "Docker"
   description: "Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications"
   url: https://www.docker.com/
   categories: [platform, container, opensource]
+  votes: [zso, sko, dan, ram, jel, ahm, olo, rob, kri, lov]
 - title: "Rocket"
   description: "CLI for running app containers, and an implementation of the App Container Spec. The goal of Rocket is to be composable, secure, and fast"
   url: https://coreos.com/blog/rocket/
   categories: [platform, container, opensource]
+  votes: []
 - title: "LXD"
   description: "New hypervisor system by Canonical (Ubuntu) in which LXC will be the client, LXD the server. Complementary with docker"
   url: http://www.ubuntu.com/cloud/tools/lxd
   categories: [hypervisor, opensource]
+  votes: [jel, eng]
 - title: "Kubernetes"
   description: "Orchestration system for Docker containers"
   url: http://kubernetes.io/
   categories: [orchestration, cluster, container, docker, opensource]
+  votes: []
 
 - title: "Tutum"
-  url: https://www.tutum.co
   description: "Take full advantage of the amazing technology that are Docker containers to build, deploy, and manage your apps across any cloud. Free Beta. Once Tutum is production ready, you will automatically move to our free forever Developer plan."
+  url: https://www.tutum.co
   categories: [docker, hosting, container, platform, free, beta]
-
+  votes: [rob, kri]
+- title: "Amazon EC2 Container Service"
+  description: "High performance container management service that supports Docker containers and allows you to easily run applications on a managed cluster of Amazon EC2 instances"
+  url: http://aws.amazon.com/ecs/
+  categories: [docker, hosting, container, platform]
+  votes: []
 
 # Orchestration tools
 - title: "Fleet"
   description: "Low level distributed init system that ties together systemd with etcd and operates at the cluster level instead of the machine level"
   url: https://github.com/coreos/fleet
   categories: [distribution, init, cluster, opensource]
+  votes: []
 
 # Automation
 - title: "Chef"
   description: "Chef is a configuration management tool designed to bring automation to your entire infrastructure"
   url: https://github.com/chef/chef
   categories: [automation, opensource]
+  votes: [jel, dah, lov]
 - title: "Puppet"
   description: "An automated administrative engine for your Linux, Unix, and Windows systems, performs administrative tasks"
   url: https://github.com/puppetlabs/puppet
   categories: [automation, opensource]
+  votes: [dan, ram, dah, kri, liz]
 - title: "Ansible"
   description: "Radically simple IT automation platform that makes your applications and systems easier to deploy"
   url: https://github.com/ansible/ansible
   categories: [automation, opensource]
+  votes: [lov, liz]
 
 # OS
 - title: "Core OS"
   description: "Linux distribution that has been rearchitected to provide features needed to run modern infrastructure stacks"
   url: https://coreos.com/
   categories: [operatingsystem, infrastructure, deployment, opensource]
+  votes: [ram]
 
 # Monitoring, logging
 - title: "Nagios"
   description: "Powerful monitoring system that enables organizations to identify and resolve IT infrastructure problems before they affect critical business processes."
   url: http://www.nagios.org/
   categories: [monitoring]
+  votes: [dan, jel, olo, kri, eng]
 - title: "Splunk"
   description: "Provides a platform for Operational Intelligence. Use Splunk to search, monitor, analyze and visualize machine data"
   url: http://www.splunk.com/
   categories: [monitoring, logging]
+  votes: [sko, dah, liz, olo]
 
 # Podcasts
 - title: "Puppet Labs Podcast"
   description: "Talking with customers, colleagues and industry leaders about what it takes to catalyze change in IT ops"
   url: https://puppetlabs.com/conversations-puppet-labs-podcast
   categories: [podcast]
+  votes: []
 - title: "The CloudCast"
   description: "Award-winning podcast on all things | Cloud Computing | AWS Ecosystem | OpenSource | DevOps | AppDev | SaaS | SDN"
   url: http://www.thecloudcast.net/
   categories: [podcast]
+  votes: []
 
 # Platforms
 - title: "Microsoft Azure"
   description: "Microsoft’s cloud platform: a growing collection of integrated services—compute, storage, data, networking, and app"
   url: http://azure.microsoft.com/sv-se/
   categories: [cloud, infrastructure, iaas, paas]
-- title: "Amazon Web Services"
+  votes: [zso, sko, dah, kri, lov, eng]
+- title: "Amazon Web Services (AWS)"
   description: "Offers reliable, scalable, and  inexpensive cloud computing services. Free to join, pay only for what you use"
   url: http://aws.amazon.com/
   categories: [cloud, infrastructure, platform, paas, iaas, scaling]
+  votes: [zso, kri, adi]
 - title: "Google App Engine"
   description: "Offers users the ability to build and host web applications on Google's infrastructure."
   url: https://cloud.google.com/appengine/docs
   categories: [cloud, infrastructure, paas, scaling]
+  votes: [zso, sko, ram, lov, liz]
 - title: "Google Cloud Platform"
   description: "Google Cloud Platform is a set of modular cloud-based services that allow you to create anything from simple websites to complex applications."
   url: https://cloud.google.com/
   categories: [cloud, infrastructure, paas, scaling]
+  votes: [sko, kri, lov, liz]
 - title: "Rackspace"
   description: "Managed, dedicated and scalable cloud computing"
   url: http://www.rackspace.com/
   categories: [cloud, infrastructure, paas, scaling]
+  votes: [dan, eng]
 
 # Books
 - title: "AWS for Dummies"
   description: "Easy-to-understand friendly guide and introduction to the Amazon Web Services platform and all it can do for you"
   url: http://www.amazon.com/Amazon-Web-Services-For-Dummies/dp/1118571835
   categories: [book]
+  votes: []
 - title: "Cloud Computing: Concepts, Technology & Architecture"
   description: "Cloud computing experts and researchers break down cloud computing technologies and practices into well-defined concepts"
   url: http://www.amazon.com/Cloud-Computing-Concepts-Technology-Architecture/dp/0133387526
   categories: [book]
+  votes: []
 - title: "Building the Infrastructure for Cloud Security"
   description: "Comprehensive look at the various facets of cloud security – infrastructure, network, services, compliance and users"
   url: http://www.apress.com/9781430261452
   categories: [book]
+  votes: [lov]
 - title: "Architecting the Cloud: Design Decisions for Cloud Computing Service Models"
   description: "Comprehensive guide covering everything you need to be aware of in selecting the right cloud service model for you"
   url: http://www.amazon.com/Architecting-Cloud-Decisions-Computing-Service/dp/1118617614
   categories: [book]
+  votes: []
 - title: "Cloud Computing Protected: Security Assessment Handbook"
   description: "Describes the most important security challenges that organizations face as they seek to adopt public cloud services and implement their own cloud-based infrastructure"
   url: http://www.amazon.com/Cloud-Computing-Protected-Security-Assessment/dp/0956355625
   categories: [book]
+  votes: []
 - title: "OpenStack Cloud Computing Cookbook"
   description: "The definitive source of information for cloud practitioners. It provides step by step recipes for installing, configuring, and managing the OpenStack Core projects"
   url: http://openstackcookbook.com/
   categories: [book]
+  votes: []
 - title: "Molntjänster - vad är molnet?"
   description: "En kort e-bok från Visma Spcs som berättar vad man bör tänka på för att göra rätt val för sitt företag"
   url: http://download.vismaspcs.se/pdf/molntj%C3%A4nster_vad-%C3%A4r-molnet.pdf
   categories: [book, sweden]
+  votes: [liz]
 
 # Articles
 - title: "A Guide to Open Source Cloud Computing Software"
   description: "Open source cloud computing software can offer distinct advantages to organizations, often leveraging strong user and developer communities and aggressive release cycles. Here's a look at the current open source cloud computing landscape."
   url: http://www.tomsitpro.com/articles/open-source-cloud-computing-software,2-754.html
   categories: [article, cloud, comparison]
+  votes: []
 - title: "Top 15 Open Source Cloud Computing Technologies 2014"
   description: "What are the hottest and most important open source technologies in the cloud computing market today? Crisp Research has examined and classified the top in order of significance."
   url: http://analystpov.com/cloud-computing/top-15-open-source-cloud-computing-technologies-2014-24727
   categories: [article, cloud, comparison]
+  votes: [adi]
 
 # Cloud
 - title: "OpenStack"
   description: "Cloud Computing Software"
   url: https://www.openstack.org/
   categories: [cloud, platform, infrastructure, opensource]
+  votes: [ahm, olo, kri]
 - title: "Eucalyptus"
   description: "Private Cloud Software"
   url: https://www.eucalyptus.com/eucalyptus-cloud/iaas
   categories: [cloud, platform, infrastructure, opensource]
+  votes: [liz]
 - title: "Microsoft Project Orleans"
   description: "Framework that provides a straight-forward approach to building distributed high-scale computing applications, used by Microsoft Azure and Halo 4 cloud services"
   url: http://dotnet.github.io/orleans/
   categories: [distribution, framework, opensource]
+  votes: [dah]
+- title: "ownCloud"
+  description: "ownCloud is a file hosting software system very similar to Dropbox, with the primary functional difference being that ownCloud is free and open-source, and thereby allowing anyone to install and operate it without charge on a private server"
+  url: https://owncloud.org/
+  categories: [cloud, platform, opensource]
+  votes: [ber, ahm]
 
 - title: "Rancher"
   description: "Platform for operating Docker in production"
   url: http://rancher.com/
   categories: [cloud, platform, docker, opensource]
+  votes: []
 - title: "Apache Brooklyn"
   description: "Library and control plane for deploying and managing distributed applications"
   url: https://brooklyn.incubator.apache.org/
   categories: [deployment, management, distribution, opensource]
+  votes: []
 - title: "Clocker"
   description: "Software for creating and managing a Docker cloud infrastructure with Apache Brooklyn"
   url: http://www.cloudsoftcorp.com/blog/2014/06/clocker-creating-a-docker-cloud-with-apache-brooklyn/
   categories: [cloud, platform, docker, opensource]
+  votes: [jel]
 
 
 # News
@@ -238,63 +313,188 @@
   description: "Comprehensive resource for cloud computing news, analysis and case studies"
   url: http://searchcloudcomputing.techtarget.com/
   categories: [news, definitions]
+  votes: []
 
 # Videos
 - title: "Revolution OS"
   description: "Documentary film that traces the twenty-year history of GNU, Linux, open source, and the free software movement"
   url: https://www.youtube.com/watch?v=jw8K460vx1c
   categories: [video, opensource]
+  votes: []
+- title: "Netapp Hybrid Cloud"
+  description: "High-level conceptual video about hybrid cloud and importance of maintaining data control and choice among resources"
+  url: http://www.netapp.com/us/solutions/cloud/hybrid-cloud/
+  categories: [video, cloud]
+  votes: [pau]
+- title: "Cisco Intercloud Fabric"
+  description: "Build highly secure hybrid clouds and extend your existing data center to public clouds as needed, on demand, and with consistent network and security policies."
+  url: http://www.cisco.com/c/en/us/products/cloud-systems-management/intercloud-fabric/index.html
+  categories: [video, cloud]
+  votes: [pau]
 
 - title: "Cloud Foundry"
   description: "Cloud computing platform as a service (PaaS) originally developed by VMware and now owned by Pivotal Software"
   url: http://cloudfoundry.org/
   categories: [cloud, paas, opensource]
+  votes: []
 
 - title: "Pivotal Web Services"
   description: "An instance of Pivotal Cloud Foundry hosted on Amazon Web Services (AWS)"
   url: http://run.pivotal.io/
   categories: [cloud, paas]
+  votes: []
 
 # Web Servers
 - title: "Nginx"
   description: "Reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer, HTTP cache, and a web server"
   url: http://nginx.org/en/docs/beginners_guide.html
   categories: [http, webserver, opensource]
+  votes: [sko, dan, kri, lov, liz]
 - title: "Apache"
   description: "World's most widely used web server software. Apache played a key role in the initial growth of the World Wide Web"
   url: https://httpd.apache.org/
   categories: [http, webserver, opensource]
+  votes: [dan, ada, kri, eng]
 
 # Database Servers
 - title: "MySQL"
   description: "The world's most popular open source database"
   url: https://www.mysql.com/
   categories: [database, sql, opensource]
+  votes: [sko, dan, ram, dah, ada, kri, lov, liz, eng]
 - title: "PostgreSQL"
   description: "The world's most advanced open source database"
   url: http://www.postgresql.org/
   categories: [database, sql, opensource]
+  votes: []
 - title: "Oracle Database (RDBMS)"
   description: "Enterprise closed source database as a service for public, private and hybrid clouds"
   url: https://www.oracle.com/database/index.html
   categories: [database, sql, dbaas]
+  votes: [dan, adi, eng]
 - title: "MongoDB"
   description: "One of many cross-platform document-oriented NoSQL databases"
   url: https://www.mongodb.org/
   categories: [database, nosql]
+  votes: []
+- title: "Percona Server"
+  description: "Drop-in replacement fork of the MySQL project. Percona aims to provide better performance, consistency, and scalability on all hardware"
+  url: https://www.digitalocean.com/community/tutorials/how-to-install-a-fresh-percona-server-or-replace-mysql
+  votes: [ahm]
+  categories: [database, sql]
+
+# Search Engines
+- title: Elastic Search
+  description: "Distributed RESTful search engine built for the cloud"
+  url: https://github.com/elastic/elasticsearch
+  categories: [searchengine, opensource]
+  votes: []
+
+# Tutorials
+- title: "MySQL Tutorial"
+  description: "Learn MySQL fast, easy and fun. In this website, we provide you with a complete MySQL tutorial that presents in a concise and easy-to-follow manner"
+  url: http://www.mysqltutorial.org/
+  categories: [tutorial]
+  votes: [dan, sea]
+- title: "How To Install a Fresh Percona Server or Replace MySQL"
+  description: "This tutorial will guide you through replacing a current MySQL or MariaDB installation with the latest Percona Server version, or installing Percona Server from scratch on a new Droplet"
+  url: https://www.digitalocean.com/community/tutorials/how-to-install-a-fresh-percona-server-or-replace-mysql
+  categories: [tutorial]
+  votes: [ahm]
+- title: "How To Install and Use Docker: Getting Started"
+  description: "Article about one of the most exciting and powerful open-source projects to come to life in the recent years. Docker can help you with so much it’s unfair to attempt to summarize its capabilities in one sentence"
+  url: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-getting-started
+  categories: [tutorial, article, docker]
+  votes: [ahm]
+- title: "Docker Part 1 – Introduction and HOWTO Install Docker on Ubuntu 14.04 LTS"
+  description: "I decided it was about time I had a bit of a play with Docker, and at the same time I thought I may as well document my process and some of the basics for any others in the same position"
+  url: http://www.tekhead.org/blog/2014/09/docker-part-1-introduction-and-howto-install-docker-on-ubuntu-14-04-lts/
+  categories: [tutorial, article, docker]
+  votes: [ahm]
+- title: "A brief introduction to using docker"
+  description: "Docker, which is a utility for manipulating lightweight containers, allowing you to quickly spin up multiple isolated environments on a single host-machine"
+  url: https://www.debian-administration.org/article/696/A_brief_introduction_to_using_docker
+  categories: [tutorial, article, docker]
+  votes: [dan]
+- title: "How to Install Docker on Ubuntu 14.04 LTS"
+  description: "Docker is a container-based software framework for automating deployment of applications. “Containers” are encapsulated, lightweight, and portable application modules."
+  url: http://www.liquidweb.com/kb/how-to-install-docker-on-ubuntu-14-04-lts/
+  categories: [tutorial, article, docker]
+  votes: [rob, pau, zso]
+- title: "Debian Docker documentation"
+  description: "Docker installation instructions for debian"
+  url: https://docs.docker.com/installation/debian/
+  categories: [tutorial, article, docker]
+  votes: [eng, kri, ada]
+- title: "Docker Try-it"
+  description: ""
+  url: https://www.docker.com/tryit/
+  categories: [tutorial, docker]
+  votes: [kri, ada]
 
 # BaaS
 - title: "Firebase"
   description: "Realtime backend as a service that allows you to create incredible apps. Save, Store and Update Data in realtime directly from the browser"
   url: https://www.firebase.com/
   categories: [baas, realtime, mongodb]
+  votes: [jel, liz]
 - title: "Parse"
   description: "Backend as a service allowing you to focus on creating unique & engaging apps on any platform"
   url: https://www.parse.com/
   categories: [baas, mongodb]
+  votes: []
 
 # Security
 - title: "Based in Sweden"
   description: "Säkra molntjänster – i Sverige, ett initiativ som garanterar dig säker lagring i Sverige, med skydd av svensk grundlag – garanterad av svenska myndigheter"
   url: http://basedinsweden.se/
   categories: [cloud, security, sweden]
+  votes: [dah, pau, liz, adi, sea]
+
+- title: "Kaseya"
+  description: "Kaseya provides IT management software that helps MSPs and mid-sized enterprises better manage IT to drive the success of their businesses, while saving time and money"
+  url: http://www.kaseya.com/company/about
+  categories: [management]
+  votes: [ram]
+
+- title: "Interoute Scalable Storage"
+  description: "Skalbar lagring hos Interoute. ISS är Interoutes molnlagringsprodukt för företag som vill ha tillgång till lagringskapacitet med hög funktionalitet utan att själva investera i infrastrukturen"
+  url: http://www.interoute.se/skalbarlagring
+  categories: [article, scaling]
+  votes: [dan]
+
+- title: "CloudFlare"
+  description: "Protects and accelerates any website online. Once your website is a part of the CloudFlare community, its web traffic is routed through our intelligent global network. We automatically optimize the delivery of your web pages"
+  url: https://www.cloudflare.com/overview
+  categories: [cdn]
+  votes: [pau]
+
+- title: "Zenoss"
+  description: "Unified IT monitoring and analytics for the modern datacenter"
+  url: http://www.zenoss.com/
+  categories: [monitoring]
+  votes: [ada]
+
+- title: "PRTG Network Monitor"
+  description: "Monitor LANs, WANs, servers, websites, appliances, URLs, and more"
+  url: http://www.paessler.com/prtg
+  categories: [monitoring]
+  votes: [ada, sea]
+
+- title: "Kibana"
+  description: "Browser based analytics and search dashboard for Elasticsearch. Kibana is a snap to setup and start using. Kibana strives to be easy to get started with, while also being flexible and powerful, just like Elasticsearch"
+  url: https://github.com/elastic/kibana
+  categories: [monitoring, opensource]
+  votes: [ada]
+
+- title: "Puppet or Chef: The configuration management dilemma"
+  description: "Puppet is model-driven, Ruby is procedural, and both are large, messy, open source ecosystems plagued with pitfalls"
+  categories: [article, automation]
+  url: http://www.infoworld.com/article/2614204/data-center/puppet-or-chef--the-configuration-management-dilemma.html
+  votes: []
+
+- title: "Citrix Networking Management"
+  description: "Citrix cloud networking solutions deliver unprecedented network scalability, optimization and management, enabling IT organizations to build next-gen enterprise data centers, secure apps and networks from threats and ensure an unparalleled user experience"
+  categories: [network, management]
+  url: http://www.citrix.se/solutions/cloud-networking/overview.html
+  votes: []

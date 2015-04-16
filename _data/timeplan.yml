@@ -11,7 +11,6 @@ grid:
       em: project_start
   17:
     wednesday:
-      fm: project
       em: project
     friday:
       fm: project
@@ -23,7 +22,6 @@ grid:
   19:
     wednesday:
       fm: project
-      em:
     friday:
       fm: project_presentation
       em: project_start

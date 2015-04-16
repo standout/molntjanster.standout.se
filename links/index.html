@@ -17,6 +17,7 @@ permalink: /links/
   </label>
   <label>
     <input type="checkbox" ng-model="showTags"/> Visa taggar
+    <input type="checkbox" ng-model="sortByVotes"/> Sortera på popularitet
   </label>
 </form>
 
@@ -30,7 +31,7 @@ permalink: /links/
 
 <!-- Angular list that can be searched, replaces jekyll list once ready -->
 <ul ng-cloak ng-show="links.length" class="Links">
-  <li ng-repeat="link in filteredLinks = (links | filter: searchFilter)">
+  <li ng-repeat="link in filteredLinks = (links | filter: searchFilter) | orderBy: order()">
     <a ng-href="[[ link.url ]]">[[ link.title ]]</a>
     <span class="Tags" ng-show="showTags">
       - <span ng-repeat="category in link.categories">[[ category.human ]]</span>
@@ -88,6 +89,11 @@ permalink: /links/
   .controller('RootCtrl', function ($scope, $http, $rootScope, $location, $timeout) {
     $scope.showTags = true;
     $scope.showDescriptions = true;
+    $scope.sortByVotes = false;
+    $scope.order = function () {
+      if ($scope.sortByVotes) { return '-votes'; }
+      return 'position';
+    };
     // GET /avsnitt.json collection and save to $scope.posts
     $http.get('/links.json')
       .then(function (response) {

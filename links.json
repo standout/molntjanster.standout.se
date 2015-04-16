@@ -4,6 +4,7 @@ layout: null
 [
 {% for link in site.data.links %}
   {% if forloop.index > 1 %},{% endif %}{
+    "position": {{ forloop.index }},
     "title": "{{ link.title }}",
     "description": "{{ link.description }}",
     "url": "{{ link.url }}",
@@ -14,7 +15,8 @@ layout: null
         "human": "{{ site.data.categories[category] }}"
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
-    ]
+    ],
+    "votes": {{ link.votes | size }}
   }
 {% endfor %}
 ]

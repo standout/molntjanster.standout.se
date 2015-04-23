@@ -8,23 +8,23 @@ grid:
       em: lecture
     friday:
       fm: lecture
-      em: project_start
+      em: lecture
   17:
     wednesday:
-      em: project
+      em: assignment
     friday:
-      fm: project
-      em: project
+      fm: lecture
+      em: lecture
   18:
     wednesday:
-      fm: project
-      em: project
+      fm: lecture
+      em: lecture
   19:
     wednesday:
-      fm: project
+      fm: lecture
     friday:
-      fm: project_presentation
-      em: project_start
+      fm: lecture
+      em: project_presentation
   20:
     wednesday:
       fm: project

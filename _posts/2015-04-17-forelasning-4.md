@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Förberedelse inför projekt"
+title: "Based in Sweden"
 date: "2015-04-17 08:30"
 week: 16
 daytime: fm

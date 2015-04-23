@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Uppföljning av förra veckan och fortsättning med docker"
+title: "Labb med boot2docker"
 date: "2015-04-16 08:30"
 week: 16
 daytime: em

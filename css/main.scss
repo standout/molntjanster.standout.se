@@ -33,13 +33,13 @@ $project-color: lightblue;
 $project-color-light: lighten($project-color, 20%);
 $project-color-dark:   darken($project-color, 15%);
 
-$project-start-color: rgb(229, 180, 245);
-$project-start-color-light: lighten($project-start-color, 20%);
-$project-start-color-dark:   darken($project-start-color, 15%);
-
-$project-presentation-color: rgb(232, 218, 159);
+$project-presentation-color: rgb(229, 180, 245);
 $project-presentation-color-light: lighten($project-presentation-color, 20%);
 $project-presentation-color-dark:   darken($project-presentation-color, 15%);
+
+$assignment-color: rgb(232, 218, 159);
+$assignment-color-light: lighten($assignment-color, 20%);
+$assignment-color-dark:   darken($assignment-color, 15%);
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -113,16 +113,15 @@ $on-laptop:        800px;
   background-color: $lecture-color;
   a:hover { background-color: $lecture-color-dark; }
 }
+.assignment {
+  background-color: $assignment-color;
+  a:hover { background-color: $assignment-color-dark; }
+}
 .project              {
   background-color: $project-color;
   a:hover { background-color: $project-color-dark; }
 }
-.project_start        {
-  background-color: $project-start-color;
-  a:hover { background-color: $project-start-color-dark; }
-}
 .project_presentation {
-
   background-color: $project-presentation-color;
   a:hover { background-color: $project-presentation-color-dark; }
 }

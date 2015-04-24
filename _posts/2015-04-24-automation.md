@@ -54,4 +54,16 @@ Annars kan ni kika köra `ifconfig` och kolla vad den visar.
 Kolla sedan att sajten fungerar `http://192.168.59.103:39393`. Så är ni klara
 med labben.
 
+## Labb 2 med docker compose
+
+Hämta ner [http://cl.ly/351b2j2g3d2A](http://cl.ly/351b2j2g3d2A).
+
+Den katalogen innehåller exempel på hur man får igång en app i docker-compose
+som klarar php och mysql.
+
+Bygg med `docker-compose build`
+
+Kör med `docker-compose up`
+
+
 [automation]: http://molntjanster.standout.se/links/?word=automation

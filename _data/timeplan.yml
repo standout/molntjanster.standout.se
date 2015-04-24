@@ -26,10 +26,10 @@ grid:
       fm: lecture
       em: project_presentation
   20:
-    wednesday:
+    tuesday:
       fm: project
       em: project
-    friday:
+    wednesday:
       fm: project
       em: project
   21:
@@ -47,6 +47,10 @@ grid:
       fm: project
       em: project_presentation
 week_days:
+  -
+    name: tuesday
+    title: "Tisdag"
+    short: "Ti"
   -
     name: wednesday
     title: "Onsdag"
